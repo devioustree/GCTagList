@@ -839,7 +839,7 @@ CGFloat imageFontLeftInsetForType(GCTagLabelAccessoryType type) {
         self.labelTextColor = DEFAULT_LABEL_TEXT_COLOR;
         
         self.gradientLayer = [CAGradientLayer layer];
-        self.gradientLayer.cornerRadius = LABEL_CORNER_RADIUS;
+        self.cornerRadius = LABEL_CORNER_RADIUS;
         self.gradientLayer.borderWidth = 0.f;
         
         self.endGradientColor = DEFAULT_LABEL_BACKGROUND_COLOR;
@@ -943,6 +943,11 @@ CGFloat imageFontLeftInsetForType(GCTagLabelAccessoryType type) {
     self->_startGradientColor = GC_RETAIN(startGradientColor);
     if(startGradientColor)
         self.selectedStartGrandientColor = [startGradientColor lighten:.1f];
+}
+
+- (void)setCornerRadius:(CGFloat)cornerRadius {
+    _cornerRadius = cornerRadius;
+    self.gradientLayer.cornerRadius = cornerRadius;
 }
 
 @end

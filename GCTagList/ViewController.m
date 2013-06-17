@@ -24,6 +24,7 @@
     
     GCTagLabel* tagLabel0 = [GCTagLabel tagLabelWithReuseIdentifier:@"test"];
     [tagLabel0 setLabelText:@"Green Chiu" accessoryType:GCTagLabelAccessoryArrowSign];
+    tagLabel0.cornerRadius = 4;
     [self.view addSubview:tagLabel0];
     
     GCTagLabel* tagLabel1 = [GCTagLabel tagLabelWithReuseIdentifier:@"test"];

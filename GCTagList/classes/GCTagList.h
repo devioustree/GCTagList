@@ -198,6 +198,7 @@ extern CGFloat const LabelVerticalPadding;
 
 
 @property (assign) GCTagLabelAccessoryType accessoryType;
+@property (nonatomic, assign) CGFloat cornerRadius;
 @property (assign) BOOL selectedEnabled; // if YES, the taglabel could show selected state. default is YES.
 @property (readonly) BOOL selected;
 @property (assign) CGSize fitSize;
